@@ -1,7 +1,7 @@
 :root {
-  --navbar-bg-color: #333;
-  --navbar-text-color: #fff;
-  --navbar-brand-color: #fff;
+  --navbar-bg-color: #fff;
+  --navbar-text-color: #000;
+  --navbar-brand-color: #000;
   --navbar-height: 64px;
 }
 
@@ -138,6 +138,30 @@ a {
   width: 100%;
   height: 100%;
   padding: 1.4rem;
+}
+
+.mega-menu {
+  position: absolute;
+  top: var(--navbar-height);
+  left: 0;
+  width: 100%;
+  /* background: var(--navbar-bg-color); */
+  background: orange;
+  transform: translateX(100%);
+  /* transition: transform 0.3s ease; */
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-menu--testing.active {
+  /* transform: translateX(calc(0% + 2rem)); */
+  transform: translateX(0%);
+}
+
+.mega-menu__link {
+  color: var(--navbar-text-color);
 }
 
 @media screen and (min-width: 700px) {
