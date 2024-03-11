@@ -1,76 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outofavenuethree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outofavenuethree</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <header id="navbar">
+      <nav class="navbar__container">
+        <a href="/" class="home__link">
+          <div class="navbar__logo">Logo</div>
+        </a>
+        <button
+          type="button"
+          id="navbar__toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar__menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar__links">
+            <li class="navbar__item">
+              <a class="navbar__link" href="/">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/about.html">About</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-<body>
-  <header id="navbar">
-    <nav class="navbar__container container">
-      <a href="/" class="home__link">
-        <div class="navbar__logo">Logo</div>
-      </a>
-      <button type="button" id="navbar__toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
-        aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div id="navbar__menu" aria-labelledby="navbar-toggle">
-        <ul class="navbar__links">
-          <li class="navbar__item">
-            <button type="button" class="testing">Work</button>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="/about">About</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="/pricing">Pricing </a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav class="mega-menu mega-menu--testing">
-      <div class="menu-col">
-        <h2>Photo</h2>
-        <ul>
-          <li><a class="mega-menu__link" href="#">Commercial</a></li>
-          <li><a class="mega-menu__link" href="#">Real Estate</a></li>
-          <li><a class="mega-menu__link" href="#">Weddings</a></li>
-          <li><a class="mega-menu__link" href="#">Events</a></li>
-        </ul>
-      </div>
-      <div class="menu-col">
-        <h2>Video</h2>
-        <ul>
-          <li><a class="mega-menu__link" href="#">Example</a></li>
-          <li><a class="mega-menu__link" href="#">Example</a></li>
-          <li><a class="mega-menu__link" href="#">Example</a></li>
-        </ul>
-      </div>
-      <div class="menu-col">
-        <h2>Editing</h2>
-        <ul>
-          <li><a class="mega-menu__link" href="#">Photo</a></li>
-          <li><a class="mega-menu__link" href="#">Video</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section></section>
-    <section></section>
-  </main>
-  <footer></footer>
-  <script src="script.js"></script>
-</body>
-
+    <main class="home">
+      <section class="hero">
+        <div class="container">
+          <div class="row">
+            <div class="hero__title">
+              <h2>Capturing memories through compelling visuals</h2>
+            </div>
+            <div class="hero-img">
+              <img src="/assets/images/hero.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <div class="row">
+            <p class="services__subtitle">
+              We offer a comprehensive range of photography, videography, and
+              editing services designed to meet your unique needs and exceed
+              your expectations.
+            </p>
+            <!-- <a href="">View work</a> -->
+          </div>
+          <div class="row">
+            <div class="media">
+              <img
+                src="/assets/images/240302ChababyBakes-3.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <h3 class="services__h3">Beautiful Imagery</h3>
+              <p class="services__p">
+                We are dedicated to delivering high-quality imagery that leaves
+                a lasting impression. Every shot we capture is meticulously
+                crafted to evoke emotion and tell your unique story.
+              </p>
+            </div>
+            <div>
+              <h3 class="services__h3">Well exposed</h3>
+              <p class="services__p">
+                From weddings to product launches, we specialize in capturing
+                the perfect shot that tells your story. Our attention to detail
+                and creative approach ensure that your visuals stand out and
+                make a statement.
+              </p>
+            </div>
+            <div>
+              <img
+                src="/assets/images/Marissa&Chris-1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <img
+                src="/assets/images/Marissa&Chris-252.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img src="/assets/images/ring.png" alt="" />
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
 </html>

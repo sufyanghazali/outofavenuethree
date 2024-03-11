@@ -13,7 +13,8 @@
 
 body {
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
 li {
@@ -24,9 +25,16 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .container {
-  max-width: 1000px;
-  padding: 0 1.4rem;
+  padding: 0 0.75rem;
+  max-width: 540px;
   margin: 0 auto;
 }
 
@@ -34,6 +42,7 @@ a {
   position: fixed;
   height: var(--navbar-height);
   background-color: var(--navbar-bg-color);
+  top: 0;
   left: 0;
   right: 0;
 }
@@ -43,6 +52,9 @@ a {
   justify-content: space-between;
   height: 100%;
   align-items: center;
+  max-width: 1000px;
+  padding: 0 1.4rem;
+  margin: 0 auto;
 }
 
 .navbar-item {
@@ -85,10 +97,11 @@ a {
 
 .icon-bar {
   display: block;
-  width: 25px;
-  height: 4px;
+  width: 24px;
+  height: 2px;
   margin: 2px;
   background-color: var(--navbar-brand-color);
+  transition: all 0.3s ease;
 }
 
 #navbar-toggle:is(:focus, :hover) .icon-bar {
@@ -98,7 +111,7 @@ a {
 #navbar__toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
   position: absolute;
   margin: 0;
-  width: 30px;
+  width: 24px;
 }
 
 #navbar__toggle[aria-expanded="true"] .icon-bar:first-child {
@@ -164,7 +177,55 @@ a {
   color: var(--navbar-text-color);
 }
 
-@media screen and (min-width: 700px) {
+.home {
+  margin-top: 12rem;
+}
+
+.hero__title {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.hero__title h2 {
+  font-weight: 300;
+  font-size: 2.488rem;
+  letter-spacing: -0.5px;
+}
+
+.services {
+  font-weight: 300;
+  font-size: 1.44rem;
+  letter-spacing: -0.5px;
+}
+
+.services__subtitle {
+  margin-top: 8rem;
+  margin-bottom: 2.5rem;
+}
+
+.services .media {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.services__h3 {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.services__p {
+  font-size: 1rem;
+}
+@media screen and (min-width: 560px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
   #navbar__toggle {
     display: none;
   }
@@ -183,5 +244,16 @@ a {
     flex-direction: row;
     width: 100%;
     height: 100%;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .container {
+    max-width: 960px;
   }
 }
