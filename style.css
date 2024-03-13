@@ -26,6 +26,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -35,10 +36,24 @@ img {
   object-fit: cover;
 }
 
+label,
+input {
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
 .container {
   padding: 0 0.75rem;
   max-width: 540px;
   margin: 0 auto;
+}
+
+.grid {
+  display: grid;
 }
 
 #navbar {
@@ -207,6 +222,15 @@ img {
   letter-spacing: -0.5px;
 }
 
+.services .title {
+  display: block;
+  font-weight: 300;
+  font-size: 2.074rem;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  padding-bottom: 1rem;
+}
+
 .services__subheader {
   margin-bottom: 2rem;
 }
@@ -255,6 +279,46 @@ img {
 #bi .media {
   width: 80%;
   justify-self: end;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 31px;
+  font-size: 1rem;
+}
+
+.contact h1 {
+  font-weight: 400;
+  font-size: 2.074rem;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  padding-bottom: 7rem;
+}
+
+.contact__info {
+  display: block;
+  line-height: 2;
+}
+.contact__details {
+  padding-bottom: 7rem;
+}
+
+.form__field {
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  font-weight: 600;
+}
+
+.form__input {
+  padding: 10px;
+}
+
+.button--form {
+  width: 100%;
 }
 
 @media screen and (min-width: 560px) {
