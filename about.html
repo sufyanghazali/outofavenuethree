@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Outofavenuethree</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header id="navbar">
-      <nav class="navbar__container">
-        <a href="/" class="home__link">
-          <div class="navbar__logo">Logo</div>
-        </a>
-        <button
-          type="button"
-          id="navbar__toggle"
-          aria-controls="navbar-menu"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div id="navbar__menu" aria-labelledby="navbar-toggle">
-          <ul class="navbar__links">
-            <li class="navbar__item">
-              <a class="navbar__link" href="/">Home</a>
-            </li>
-            <li class="navbar__item">
-              <a class="navbar__link navbar__link--active" href="/about.html"
-                >About</a
-              >
-            </li>
-            <li class="navbar__item">
-              <a class="navbar__link" href="/contact.html">Contact</a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Outofavenuethree</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="navbar">
+    <nav class="navbar__container">
+      <a href="/" class="home__link">
+        <div class="navbar__logo">
+          <img src="assets/images/logo.png" alt="">
         </div>
-      </nav>
-    </header>
+      </a>
+      <button type="button" id="navbar__toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+        aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="navbar__menu" aria-labelledby="navbar-toggle">
+        <ul class="navbar__links">
+          <li class="navbar__item">
+            <a class="navbar__link" href="/">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link navbar__link--active" href="/about.html">About</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <main class="about">
-      <div class="container">
-        <div class="grid grid--row">
-          <div class="row">
-            <h1>Heyya!</h1>
-            <p>
-              My name is Nadirah but you can call me Nad. I am based in Perth
-              Australia and have been a hobbyist photographer and wedding
-              videographer since 2009. I am now a budding enthusiast who would
-              love to capture your special moments.
-            </p>
-            <a class="button button_cta" href="contact.html">Get in touch</a>
-          </div>
+  <main class="about">
+    <div class="container">
+      <div class="grid grid--row">
+        <div class="row">
+          <h1 class="title">Heyya!</h1>
+          <p>
+            My name is Nadirah but you can call me Nad. I am based in Perth
+            Australia and have been a hobbyist photographer and wedding
+            videographer since 2009. I am now a budding enthusiast who would
+            love to capture your special moments.
+          </p>
+          <a class="button button__cta" href="contact.html">Get in touch</a>
         </div>
       </div>
-    </main>
-    <footer></footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

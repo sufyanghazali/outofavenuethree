@@ -64,6 +64,10 @@ textarea {
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
 #navbar {
   position: fixed;
   height: var(--navbar-height);
@@ -93,8 +97,7 @@ textarea {
 
 .navbar__logo {
   color: var(--navbar-brand-color);
-  width: 30px;
-  height: 30px;
+  width: 100px;
 }
 
 .navbar__link {
@@ -234,7 +237,8 @@ textarea {
   letter-spacing: -0.5px;
 }
 
-.services .title {
+.services .title,
+.about .title {
   display: block;
   font-weight: 300;
   font-size: 2.074rem;
@@ -242,6 +246,10 @@ textarea {
   line-height: 1.3;
   padding-bottom: 1rem;
 }
+
+.about .title {
+  margin-bottom: 0.5rem;
+;}
 
 .services__subheader {
   margin-bottom: 2rem;
@@ -338,8 +346,12 @@ textarea {
   padding: 10px;
 }
 
-.button--form {
+.button__form {
   width: 100%;
+}
+
+.button__cta {
+  margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 560px) {
@@ -395,13 +407,13 @@ textarea {
   }
 
   .grid--row {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
     grid-template-areas: "left right";
   }
 
   .grid--col {
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "top"
       "bottom";
@@ -472,22 +484,34 @@ textarea {
 
   #ring + .services__p--1 {
     padding-left: 5rem;
-    width: 50%;
   }
 
   #ring .media {
     width: 50%;
   }
 
-  .services--cta .services__p {
-    padding-bottom: 1rem;
+  .services--cta {
+    padding-bottom: 7rem;
   }
+
   .services--cta .title {
     padding-bottom: 2rem;
   }
 
-  .button--form {
+  .services--cta .flex {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .services--cta .grid--row {
+    column-gap: 5rem;
+    grid-template-columns: 60% 1fr;
+  }
+
+  .button__form {
     width: auto;
+    float: right;
   }
 
   .contact h1 {
@@ -502,7 +526,7 @@ textarea {
 
 @media screen and (min-width: 990px) {
   .container {
-    max-width: 1920px;
+    max-width: 1680px;
   }
 
   .services__subheader {
@@ -515,6 +539,14 @@ textarea {
 }
 
 @media screen and (min-width: 1320px) {
+  #navbar {
+    height: 80px;
+  }
+
+  .navbar__logo {
+    width: 175px;
+  }
+
   .services__subheader {
     font-size: 2.074rem;
   }
