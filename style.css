@@ -121,8 +121,8 @@ main {
   color: var(--navbar-brand-color);
 }
 
-.navbar__link:is(:focus, :hover),
-.button:is(:focus, :hover) {
+.navbar__link:is(:hover),
+.button:is(:hover) {
   opacity: 0.5;
 }
 
@@ -188,6 +188,10 @@ main {
   visibility: visible;
 }
 
+.navbar__item {
+  position: relative;
+}
+
 .navbar__links {
   list-style: none;
   position: absolute;
@@ -202,26 +206,29 @@ main {
 
 .mega-menu {
   position: absolute;
-  top: var(--navbar-height);
-  left: 0;
-  width: 100%;
-  /* background: var(--navbar-bg-color); */
-  background: orange;
-  transform: translateX(100%);
-  /* transition: transform 0.3s ease; */
-
-  padding: 2rem;
+  color: var(--navbar-brand-color);
+  background: var(--navbar-bg-color);
+  text-align: center;
+  transition: all 0.2s ease;
+  padding: 2.5rem;
+  opacity: 0;
   display: flex;
-  flex-direction: column;
 }
 
 .mega-menu--testing.active {
   /* transform: translateX(calc(0% + 2rem)); */
-  transform: translateX(0%);
+  /* transform: translateY(0%); */
+  opacity: 1;
 }
 
-.mega-menu__link {
-  color: var(--text-color);
+.mega-menu__header {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.menu__col {
+  margin-right: 3rem;
 }
 
 .button {
@@ -281,7 +288,7 @@ main {
 @media screen and (min-width: 560px) {
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .navbar__container {
     padding: 0 3rem;
   }
@@ -347,10 +354,11 @@ main {
   }
 }
 
-@media screen and (min-width: 990px) {
-}
-
 @media screen and (min-width: 1320px) {
+  .container {
+    max-width: 1214px;
+  }
+
   .navbar__logo {
     width: 175px;
   }
