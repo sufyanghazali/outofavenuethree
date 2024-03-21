@@ -1,163 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outofavenuethree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outofavenuethree</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header id="navbar">
-    <nav class="navbar__container">
-      <a href="/" class="home__link">
-        <div class="navbar__logo">
-          <img src="assets/images/logo.png" alt="">
-        </div>
-      </a>
-      <button type="button" id="navbar__toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
-        aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div id="navbar__menu" aria-labelledby="navbar-toggle">
-        <ul class="navbar__links">
-          <li class="navbar__item">
-            <a class="navbar__link navbar__link--active" href="/">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="/about.html">About</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="/contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main class="home">
-    <section class="hero">
-      <div class="row">
-        <div class="container">
-          <div class="grid grid--row">
-            <div class="hero__title">
-              <h2>Capturing memories through compelling visuals</h2>
-            </div>
-            <div class="hero-img">
-              <img src="/assets/images/hero.jpg" alt="" />
-            </div>
+  <body>
+    <header id="navbar">
+      <nav class="navbar__container">
+        <a href="/" class="home__link">
+          <div class="navbar__logo">
+            <img src="assets/images/logo.png" alt="" />
           </div>
+        </a>
+        <button
+          type="button"
+          id="navbar__toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar__menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar__links">
+            <li class="navbar__item">
+              <a class="navbar__link navbar__link--active" href="/">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/about.html">About Us</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/services.html">Services</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/pricing.html">Price Guide</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
-    <section class="services">
-      <div class="container">
-        <div class="row">
-          <div class="grid grid--row">
-            <div class="grid grid__cell--right">
-              <h3 class="services__subtitle">Our Services</h3>
-              <p class="services__subheader">
-                We offer a comprehensive range of photography, videography,
-                and editing services designed to meet your unique needs and
-                exceed your expectations.
-              </p>
-            </div>
-          </div>
+      </nav>
+      <nav class="mega-menu mega-menu--testing">
+        <div class="menu-col">
+          <h2>Photo</h2>
+          <ul>
+            <li><a class="mega-menu__link" href="#">Commercial</a></li>
+            <li><a class="mega-menu__link" href="#">Real Estate</a></li>
+            <li><a class="mega-menu__link" href="#">Weddings</a></li>
+            <li><a class="mega-menu__link" href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h2>Video</h2>
+          <ul>
+            <li><a class="mega-menu__link" href="#">Example</a></li>
+            <li><a class="mega-menu__link" href="#">Example</a></li>
+            <li><a class="mega-menu__link" href="#">Example</a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h2>Editing</h2>
+          <ul>
+            <li><a class="mega-menu__link" href="#">Photo</a></li>
+            <li><a class="mega-menu__link" href="#">Video</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-          <!-- <a href="">View work</a> -->
-        </div>
-      </div>
-      <div class="container">
+    <main class="home">
+      <section class="hero">
         <div class="row">
-          <div class="grid grid--row" id="bic">
-            <div id="chababy-img">
-              <div class="media">
-                <img src="/assets/images/240302ChababyBakes-3.jpg" alt="" />
-              </div>
-            </div>
-            <div id="bi" class="grid grid--row">
-              <div class="services__p--1">
-                <h3 class="services__h3">Beautiful Imagery</h3>
-                <p class="services__p">
-                  We are dedicated to delivering high-quality imagery that
-                  leaves a lasting impression. Every shot we capture is
-                  meticulously crafted to evoke emotion and tell your unique
-                  story.
+          <div class="container">
+            <div class="grid grid--row">
+              <div class="">
+                <h2>Welcome</h2>
+                <p>
+                  It's a great investment to use photos and videos to preserve
+                  life's memorable moments. You may look back on these memories
+                  for years to come and relive every moment that passes by, by
+                  keeping them preserved. It's crucial to record these
+                  significant life events, whether you go with us.
+                </p>
+                <p>
+                  We are very happy that you've made the decision to do this and
+                  save these memories for a long time. Whether it's an
+                  engagement, wedding, elopement, graduation, anniversary,
+                  honeymoon, or just some casual shots, we are excited to
+                  capture all of the love, excitement, and connection around
+                  your special moments. Together, let's have a conversation and
+                  make something lovely.
                 </p>
               </div>
-              <div class="media">
-                <img src="/assets/images/Marissa&Chris-1.jpg" alt="" />
+              <div class="">
+                <img src="/assets/images/hero.jpg" alt="" />
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="we" class="container">
-        <div class="row">
-          <div class="grid grid--row">
-            <div class="grid grid--col">
-              <div id="ring" class="grid__cell--bottom">
-                <div class="media">
-                  <img src="/assets/images/ring.png" alt="" />
-                </div>
-              </div>
-              <div class="services__p--1 grid__cell--top">
-                <h3 class="services__h3">Well exposed</h3>
-                <p class="services__p">
-                  From weddings to product launches, we specialize in
-                  capturing the perfect shot that tells your story. Our
-                  attention to detail and creative approach ensure that your
-                  visuals stand out and make a statement.
-                </p>
-              </div>
-            </div>
-
-            <div class="container grid grid__cell--right">
-              <div id="mc-250" class="media">
-                <img src="/assets/images/Marissa&Chris-250.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="services services--cta">
-      <div class="container">
-        <div class="row">
-          <div class="grid grid--row">
-            <div class="media">
-              <img src="/assets/images/Marissa&Chris-58.jpg" alt="" />
-            </div>
-            <div class="grid__cell--right">
-              <div class="flex">
-                <div class="copy">
-                  <span class="title">
-                    We turn moments into memories and stories into stunning
-                    visuals
-                  </span>
-                  <p class="services__p">
-                    Your vision is our priority. We understand the importance of
-                    capturing your special moments with precision and care. Let us
-                    be your trusted partner in preserving your memories and
-                    creating visual stories.
-                  </p>
-                  <a class="button button__cta" href="contact.html">Get in touch</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer></footer>
-  <script src="script.js"></script>
-</body>
-
+      </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
 </html>

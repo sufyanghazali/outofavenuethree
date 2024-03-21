@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Outofavenuethree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Outofavenuethree</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header id="navbar">
-    <nav class="navbar__container">
-      <a href="/" class="home__link">
-        <div class="navbar__logo">
-          <img src="assets/images/logo.png" alt="">
+  <body>
+    <header id="navbar">
+      <nav class="navbar__container">
+        <a href="/" class="home__link">
+          <div class="navbar__logo">
+            <img src="assets/images/logo.png" alt="" />
+          </div>
+        </a>
+        <button
+          type="button"
+          id="navbar__toggle"
+          aria-controls="navbar-menu"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar__menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar__links">
+            <li class="navbar__item">
+              <a class="navbar__link navbar__link--active" href="/">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/about.html">About</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/services.html">Services</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/pricing.html">Price Guide</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
-      </a>
-      <button type="button" id="navbar__toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
-        aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div id="navbar__menu" aria-labelledby="navbar-toggle">
-        <ul class="navbar__links">
-          <li class="navbar__item">
-            <a class="navbar__link" href="/">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link navbar__link--active" href="/about.html">About</a>
-          </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="/contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+      </nav>
+      <nav class="mega-menu mega-menu--testing">
+        <div class="menu-col">
+          <h2>Photo</h2>
+          <ul>
+            <li><a class="mega-menu__link" href="#">Commercial</a></li>
+            <li><a class="mega-menu__link" href="#">Real Estate</a></li>
+            <li><a class="mega-menu__link" href="#">Weddings</a></li>
+            <li><a class="mega-menu__link" href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h2>Video</h2>
+          <ul>
+            <li><a class="mega-menu__link" href="#">Example</a></li>
+            <li><a class="mega-menu__link" href="#">Example</a></li>
+            <li><a class="mega-menu__link" href="#">Example</a></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h2>Editing</h2>
+          <ul>
+            <li><a class="mega-menu__link" href="#">Photo</a></li>
+            <li><a class="mega-menu__link" href="#">Video</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <main class="about">
-    <div class="container">
-      <div class="grid grid--row">
-        <div class="row">
-          <h1 class="title">Heyya!</h1>
-          <p>
-            My name is Nadirah but you can call me Nad. I am based in Perth
-            Australia and have been a hobbyist photographer and wedding
-            videographer since 2009. I am now a budding enthusiast who would
-            love to capture your special moments.
-          </p>
-          <a class="button button__cta" href="contact.html">Get in touch</a>
+    <main class="about">
+      <div class="container">
+        <div class="grid grid--row">
+          <div class="">
+            <h1 class="title">About Outofavenuethree</h1>
+            <p>
+              We are a small team based in Perth, Western Australia. We've been
+              capturing the magical moments of weddings, graduation and events
+              for over five years.
+            </p>
+            <p>
+              We love to keep things simple but creative and, of course,
+              memorable.
+            </p>
+          </div>
+          <div class="">
+            <img src="/assets/images/hero.jpg" alt="" />
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer></footer>
-  <script src="script.js"></script>
-</body>
-
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
 </html>

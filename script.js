@@ -1,4 +1,3 @@
-// FORM PROCESSING
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const navbarToggle = navbar.querySelector("#navbar__toggle");
