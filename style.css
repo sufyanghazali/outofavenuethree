@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "Garet";
+  src: url("assets/fonts/garet/Garet-Book.woff2") format("woff"),
+    url("assets/fonts/garet/Garet-Book.woff") format("woff");
+}
+
 :root {
   --navbar-bg-color: #222022;
   --text-color: #242424;
   --navbar-text-color: #242424;
   --navbar-brand-color: #f5f5ef;
-  --navbar-height: 64px;
+  --navbar-height: 100px;
 }
 
 * {
@@ -12,8 +18,12 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  /* height: 100vh; */
+  height: 100%;
   font-family: Inter, Arial, Helvetica, sans-serif;
   line-height: 1.5;
   background-color: #f5f5ef;
@@ -54,8 +64,13 @@ textarea {
   font-size: 100%;
 }
 
-main {
-  margin-top: var(--navbar-height);
+.home,
+.about {
+  padding-top: var(--navbar-height);
+  height: calc(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -66,6 +81,38 @@ main {
 
 .grid {
   display: grid;
+}
+
+.grid__row {
+  grid-template-areas: "left right";
+}
+
+.grid__row--2-3 {
+  grid-template-columns: 40% 60%;
+}
+
+.grid__row--3-2 {
+  grid-template-columns: 3fr 2fr;
+}
+
+.grid-col {
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "top"
+    "bottom";
+}
+
+.grid__cell--left {
+  grid-area: left;
+}
+.grid__cell--right {
+  grid-area: right;
+}
+.grid__cell--top {
+  grid-area: top;
+}
+.grid__cell--bottom {
+  grid-area: bottom;
 }
 
 .flex {
@@ -81,6 +128,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 .navbar__container {
@@ -183,7 +231,8 @@ main {
   /* transition:  */
 }
 
-#navbar.is-open #navbar__menu {
+#navbar.is-open #navbar__menu,
+.modal__overlay.is-open {
   opacity: 1;
   visibility: visible;
 }
@@ -205,19 +254,22 @@ main {
 }
 
 .mega-menu {
+  display: none;
   position: absolute;
   color: var(--navbar-brand-color);
   background: var(--navbar-bg-color);
   text-align: center;
+  transform: translate(calc(-50% + 103.531px / 2), -3%);
+  visibility: hidden;
   transition: all 0.2s ease;
-  padding: 2.5rem;
+  padding: 3rem 2rem;
   opacity: 0;
   display: flex;
 }
 
 .mega-menu--testing.active {
-  /* transform: translateX(calc(0% + 2rem)); */
-  /* transform: translateY(0%); */
+  transform: translate(calc(-50% + 103.531px / 2), 0%);
+  visibility: visible;
   opacity: 1;
 }
 
@@ -225,17 +277,70 @@ main {
   font-size: 1rem;
   font-weight: 400;
   text-decoration: underline;
+  white-space: nowrap;
 }
 
 .menu__col {
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
+  padding: 0 2rem;
+}
+
+.menu__col:last-child {
+  margin-right: 0;
+}
+
+.mega-menu__header,
+.mega-menu__item {
+  margin-bottom: 0.5rem;
+}
+
+.mega-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.mega-menu__link {
+  white-space: nowrap;
+}
+
+/* || GENERAL STYLING */
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.copy p {
+  margin-top: 1rem;
+}
+
+.copy .button {
+  margin-top: 100px;
+}
+
+.headline {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-family: Garet;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.media {
+  width: 100%;
 }
 
 .button {
   display: inline-block;
   padding: 0.6rem 1.5rem;
   border: 1px solid var(--text-color);
-  border-radius: 31px;
+  border-radius: 4px;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -285,6 +390,18 @@ main {
   margin-top: 1.5rem;
 }
 
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.13);
+  z-index: 1;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
 @media screen and (min-width: 560px) {
 }
 
@@ -300,7 +417,7 @@ main {
   .navbar__link {
     font-size: 0.833rem;
     font-weight: 400;
-    padding: 0.4em 2rem;
+    padding: 0.4rem 2rem;
   }
 
   #navbar__toggle {
@@ -326,32 +443,6 @@ main {
   .navbar__link--active {
     font-weight: 500;
   }
-
-  .grid--row {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    grid-template-areas: "left right";
-  }
-
-  .grid--col {
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "top"
-      "bottom";
-  }
-
-  .grid__cell--left {
-    grid-area: left;
-  }
-  .grid__cell--right {
-    grid-area: right;
-  }
-  .grid__cell--top {
-    grid-area: top;
-  }
-  .grid__cell--bottom {
-    grid-area: bottom;
-  }
 }
 
 @media screen and (min-width: 1320px) {
@@ -360,6 +451,12 @@ main {
   }
 
   .navbar__logo {
-    width: 175px;
+    width: 250px;
+  }
+
+  .navbar__link {
+    font-size: 0.833rem;
+    font-weight: 400;
+    padding: 1rem 4rem;
   }
 }
