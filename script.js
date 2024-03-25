@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeMobileNavbar() {
     navbar.classList.remove("is-open");
     navbarToggle.setAttribute("aria-expanded", "false");
+    overlay.classList.remove("is-open");
   }
 
   function openMegaMenu() {
