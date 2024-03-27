@@ -1,10 +1,13 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
     $message = $_POST['message'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
 
-    $to = 'your-email@example.com';
+    $name = $firstName . ' ' . $lastName;
+
+    $to = 'hello@outofavenuethree.com';
     $subject = 'New Contact Form Submission';
     $body = "Name: $name\nEmail: $email\nMessage: $message";
 

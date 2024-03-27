@@ -1,10 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
   const carouselOverlay = document.querySelector(".carousel__overlay");
   const activeImage = document.querySelector(".active-image");
-  const workItems = document.querySelectorAll(".work-item");
+  const workItems = document.querySelectorAll(".work-item__header");
   const galleryImages = document.querySelectorAll(".gallery__image");
   const backButton = document.querySelector(".carousel__button--back");
   const nextButton = document.querySelector(".carousel__button--next");
+  const body = document.querySelector("body");
 
   let activeGallery;
   let activeGalleryImages;
@@ -13,22 +14,24 @@ window.addEventListener("DOMContentLoaded", () => {
   carouselOverlay.addEventListener("click", () => {
     if (carouselOverlay.classList.contains("is-open")) {
       carouselOverlay.classList.remove("is-open");
+      body.classList.remove("noscroll");
       img = activeImage.querySelector("img");
       activeImage.removeChild(img);
     }
   });
 
-  // workItems.forEach (item of workItems) {
-  //   item.addEventListener("click", () => {
-  //     carouselOverlay.classList.add("is-open");
-  //     console.log("work item clicked");
-  //   });
-  // }
+  workItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      carouselOverlay.classList.add("is-open");
+      console.log("work item clicked");
+    });
+  });
 
   galleryImages.forEach((image) => {
     image.addEventListener("click", (e) => {
       e.stopPropagation();
       carouselOverlay.classList.add("is-open");
+      body.classList.add("noscroll");
 
       activeGallery = image.parentNode.parentNode;
 
